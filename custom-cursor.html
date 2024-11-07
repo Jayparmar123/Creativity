@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            background-color: black;
+            cursor: none;
+            color: white;
+        }
+        
+        .cursor-dot {
+            height: 5px;
+            width: 5px;
+            background-color: #00ff62;
+        }
+        
+        .cursor-outline {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ff00ea;
+            transition: ease-in-out;
+        }
+        
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            translate: -50% -50%;
+            border-radius: 50%;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <p id="p"></p>
+
+    <script>
+        let cursorDot = document.querySelector("[data-cursor-dot]");
+        let cursorOutline = document.querySelector("[data-cursor-outline]");
+
+        window.addEventListener("mousemove", function(e) {
+            let x = e.clientX;
+            let y = e.clientY;
+
+            cursorDot.style.left = `${x}px`;
+            cursorDot.style.top = `${y}px`;
+
+            cursorOutline.style.left = `${x}px`;
+            cursorOutline.style.top = `${y}px`;
+            cursorOutline.style.transition = "150ms";
+        })
+        let a = 1;
+        setInterval((e) => {
+            while (a < 100) {
+                document.getElementById("p").innerHTML = a;
+                a++;
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

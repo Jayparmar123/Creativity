@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            cursor: url('../../image/download.png'), auto;
+        }
+        /* selectors 1 id 2 class 3 tag name 4 universal */
+        /* desdent selector */
+        /* div>a,
+        div>p {
+            text-decoration: none;
+            color: black;
+            background-color: aqua; 
+        }
+        
+        grouping selector
+        h1,
+        p {
+            color: red;
+            background-color: antiquewhite;
+        }
+        next selector
+        h4+p {
+            color: greenyellow;
+            background-color: black;
+        }
+        sibling selector 
+        h4+p {
+            color: greenyellow;
+            background-color: black;
+        }*/
+        /* pseudo class hover,focus,active,visited,nth child,first child,last child,checked,valid,invalid*/
+        
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            transition: 1s;
+        }
+        
+        .box:hover {
+            height: 500px;
+            width: 500px;
+            /* border-radius: 100%; */
+            background-color: blueviolet;
+            transform: skewX(45deg) rotate(180deg);
+        }
+        /* input:focus {
+            height: 50px;
+            width: 50%;
+            background-color: bisque;
+            transition: 1s;
+        } */
+        
+        a:active {
+            background-color: aquamarine;
+            font-size: 20px;
+            color: black;
+        }
+        
+        a:visited {
+            background-color: brown;
+            color: green;
+        }
+        /* li:nth-child(odd) {
+            background-color: lightgoldenrodyellow;
+            color: brown;
+        } */
+        
+        input[type="checkbox"] {
+            /* attribute selector*/
+            height: 20px;
+            width: 20px;
+            display: none;
+        }
+        
+        input[type="checkbox"]:checked+label {
+            display: inline-flex;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            border-radius: 100%;
+            background-color: rgb(38, 211, 38);
+            font-size: 20px;
+            color: white;
+        }
+        
+        input[type="number"] {
+            height: 35px;
+            width: 350px;
+            outline: none;
+        }
+        
+        input[type="number"]:valid {
+            border: 3px solid greenyellow;
+        }
+        
+        input[type="number"]:invalid {
+            border: 3px solid red;
+        }
+        /* pseudo element: first-line,first-letter,placeholder,before,after,marker,selection */
+        
+        p::first-line {
+            color: aqua;
+            background-color: red;
+        }
+        
+        p::first-letter {
+            color: black;
+            background-color: red;
+            font-size: 30px;
+        }
+        
+         ::placeholder {
+            color: red;
+        }
+        
+        input {
+            caret-color: rgb(0, 255, 242);
+            background-color: black;
+            padding: 10px;
+        }
+        
+         ::marker {
+            color: rgb(255, 196, 0);
+            font-size: 30px;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        li::before {
+            content: "🐱‍🏍";
+        }
+        
+        li::after {
+            content: "👏";
+        }
+        
+         ::selection {
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <header>
+        <h4>Header</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, autem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rem?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, blanditiis!</p>
+    </header>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, dicta.</p>
+    <div>
+        <a href="">Home</a>
+        <a href="">about</a>
+        <a href="">services</a>
+        <a href="">contact</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, minus!</p>
+    </div>
+
+    <a href="">page 1</a>
+    <a href="">page 3</a>
+    <a href="">page 2</a>
+    <a href="">page 2</a>
+    <a href="">page 2</a>
+    
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, ipsum.</p> -->
+
+
+    <!-- <div class="box"></div> -->
+
+    <!-- <input type="text">
+
+    <a href="">page 2</a> -->
+
+    <!-- <!-- <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul> -->
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <!-- <table>
+
+    </table> -->
+    <!-- 
+    <input type="checkbox" name="" id="check">
+     <label for="check">fill this checkbox</label> -->
+    <!-- <label for="check">✔</label> 
+
+    <input type="number" max="10"> -->
+    <!-- <input type="checkbox" name="" id="check"> -->
+
+    <input type="text" placeholder="Enter your name">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium eos architecto assumenda id quo quidem autem. Soluta corrupti ducimus ipsa! Dolore, ipsum! Beatae pariatur id exercitationem eos consectetur. Quis ducimus beatae quo ad animi
+        neque obcaecati, quia molestiae necessitatibus.</p>
+
+</body>
+
+</html>
+</body>
+
+</html>

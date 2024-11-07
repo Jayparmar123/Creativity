@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color</title>
+
+    <style>
+        .container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            /* background-color: rgb(0, 136, 255); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: Rotate 5s infinite ease-in-out;
+        }
+        
+        @media (max-width:500px) {
+            .box {
+                width: 50%;
+            }
+        }
+        
+        @keyframes Rotate {
+            25% {
+                rotate: 90deg;
+                height: 50px;
+                width: 50px;
+            }
+            50% {
+                rotate: 180deg;
+                height: 100px;
+                width: 100px;
+            }
+            75% {
+                rotate: 270deg;
+                height: 150px;
+                width: 150px;
+            }
+            100% {
+                rotate: 360deg;
+                height: 200px;
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+
+    <script>
+        function randomColor() {
+            const $1 = Math.floor(Math.random() * 255);
+            const $2 = Math.floor(Math.random() * 255);
+            const $3 = Math.floor(Math.random() * 255);
+
+            let rgb = `rgb(${$1},${$2},${$3})`;
+
+            return rgb;
+        }
+
+        let box = document.querySelectorAll('.box');
+        Array.from(box).forEach((e) => {
+            setInterval(() => {
+                e.style.color = randomColor();
+                e.style.backgroundColor = randomColor();
+                e.style.transition = 1 + 's';
+                // e.style.rotate = `${Math.round(Math.random()*360)}deg`;
+                // e.style.height = `${Math.round(Math.random()*300)}px`;
+                // e.style.width = `${Math.round(Math.random()*300)}px`;
+                console.log(e);
+            }, 1000)
+        })
+    </script>
+
+</body>
+
+</html>

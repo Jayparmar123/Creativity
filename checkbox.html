@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(12, 7, 7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        label {
+            height: 25px;
+            width: 25px;
+            border-radius: 1000px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        input[type="checkbox"]:checked~label {
+            background-color: rgb(0, 255, 136);
+            transition: .5s;
+        }
+        
+        input[type="checkbox"]:checked~label>svg {
+            transform: rotate(360deg);
+            transition: .5s;
+            fill: black;
+        }
+        
+        svg {
+            transition: .5s;
+            height: 20px;
+            width: 20px;
+            transform: rotate(180deg);
+            fill: rgb(0, 255, 136);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+    </label>
+</body>
+
+</html>

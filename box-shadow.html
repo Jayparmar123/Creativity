@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            /* background-color: black; */
+            overflow-x: hidden;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .box {
+            background-color: rgb(244, 239, 239);
+            border-radius: 1000px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.10), -10px -10px 20px white, -8px -8px 8px white inset, 8px 8px 8px rgba(0, 0, 0, 0.1) inset;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+        let box = document.querySelectorAll(".box");
+        box.forEach((e) => {
+            let random = Math.floor(Math.random() * 50);
+            if (random > 10 && random < 50) {
+                e.style.height = random + "px";
+                e.style.width = random + "px";
+            }
+            e.style.left = Math.floor(Math.random() * 100) + "%";
+            e.style.top = Math.floor(Math.random() * 75) + "vh";
+        })
+    </script>
+
+</body>
+
+</html>
